@@ -8,6 +8,21 @@ const pokemon2 = document.getElementById('pokemon-pic-2');
 const pokemon3 = document.getElementById('pokemon-pic-3');
 const button = document.getElementById('button');
 
+const generatePokemon = () =>{
+    let randomNum1 = Math.floor(Math.random() * pokemon.length);
+    let randomNum2 = Math.floor(Math.random() * pokemon.length);
+    let randomNum3 = Math.floor(Math.random() * pokemon.length);
+};
+
+
+
+button.addEventListener('click', ()=>{
+    generatePokemon();
+});
+
+
+
+
 // set event listeners 
   // get user input
   // use user input to update state 
