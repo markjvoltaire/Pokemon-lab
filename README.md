@@ -2,6 +2,14 @@
 
 ## Making a plan
 
+## HTML ELEMENTS
+3 Radio Buttons
+1 Submit Button
+
+##
+
+
+
 (bolded steps are mandatory, unbolded are for more advanced projects)
 
 1) **Make a drawing of your app. Simple "wireframes"**
