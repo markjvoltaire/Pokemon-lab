@@ -17,3 +17,24 @@ export function getPokedex(){
 
     return pokedex;
 }
+
+export function encounterPokemon(id){
+
+    const results = getPokedex();
+    
+    const item = findById(id, results);
+
+    console.log(item);
+
+    if (item) {
+        item.encountered++;
+    } else {
+        const newItem = { id: id, encountered: 1, captured: 0 };
+        results.push(newItem);
+    }
+    const resultsString = JSON.stringify(results);
+    localStorage.setItem('POKEDEX', resultsString);
+
+}
+
+
