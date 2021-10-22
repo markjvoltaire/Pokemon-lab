@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import pokemon from '../pokemon.js';
+//import pokemon from '../pokemon.js';
 import { encounterPokemon, getPokedex } from '../utils.js';
 
 const test = QUnit.test;
@@ -28,7 +28,7 @@ test('count everytime a pokemon is shown', (expect) => {
     encounterPokemon(1);
     const pokedex = getPokedex();
 
-    console.log(pokedex);
+   // console.log(pokedex);
 
     const expected = [
         { 'id': 1, encountered: 2, captured: 0 },
