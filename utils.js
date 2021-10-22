@@ -24,7 +24,7 @@ export function encounterPokemon(id){
     
     const item = findById(id, results);
 
-    console.log(item);
+    
 
     if (item) {
         item.encountered++;
@@ -36,5 +36,15 @@ export function encounterPokemon(id){
     localStorage.setItem('POKEDEX', resultsString);
 
 }
+
+export function capturedPokemon(id) {
+    const pokedex = getPokedex();
+    const pokemonItem = findById(id, pokedex);
+    pokemonItem.captured++;
+
+    const pokedexString = JSON.stringify(pokedex);
+    localStorage.setItem('POKEDEX', pokedexString);
+}
+
 
 
