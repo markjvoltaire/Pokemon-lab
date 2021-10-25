@@ -49,7 +49,7 @@ const generatePokemon = () =>{
 };
 
 let totalPlays = 0;
-encounterPokemon();
+generatePokemon();
 
 button.addEventListener('click', ()=>{
     const pickedPokemon = document.querySelector('input[type=radio]:checked');
@@ -61,7 +61,7 @@ button.addEventListener('click', ()=>{
         totalPlays++;
 
         if (totalPlays >= 10) {
-            window.location.href = './results.html';
+            window.location.href = './results/index.html';
         } else {
             
             generatePokemon();
@@ -71,4 +71,3 @@ button.addEventListener('click', ()=>{
 
 });
 
-generatePokemon();
