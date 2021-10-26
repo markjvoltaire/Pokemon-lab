@@ -1,4 +1,4 @@
-import pokemon from '../pokemon.js';
+import pokemons from '../pokemon.js';
 import { findById, getPokedex } from '../utils.js';
 
 
@@ -20,7 +20,7 @@ const getResults = getPokedex();
 
 for (let item of getResults){
 
-    const caughtPokemon = findById(item.id, pokemon);
+    const caughtPokemon = findById(item.id, pokemons);
     const container = document.createElement('div');
 
     container.classList.add('results-container');
@@ -58,8 +58,8 @@ for (let item of getResults){
 
 
 const names = getResults.map((item)=>{
-    const findPoke = findById(item.id, pokemon);
-    return findPoke.name;
+    const findPoke = findById(item.id, pokemons);
+    return findPoke.pokemon;
 });
 
 //const picked = getResults.map(item=>item.picked);
@@ -73,10 +73,10 @@ var ctx = document.getElementById('resultsChart').getContext('2d');
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: pickedNames,
+        labels: names,
         datasets: [{
             label: '# of Times Picked',
-            data: names,
+            data: pickedNames,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -105,4 +105,4 @@ new Chart(ctx, {
     }
 });
 
-
+console.log(pickedNames);
